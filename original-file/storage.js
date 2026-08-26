@@ -1,0 +1,12 @@
+export function simpanTugas(daftarTugas) {
+    localStorage.setItem(
+        "daftarTugas",
+        JSON.stringify(daftarTugas)
+    );
+}
+
+export function muatTugas() {
+    const data = localStorage.getItem("daftarTugas");
+
+    return data ? JSON.parse(data) : [];
+}
